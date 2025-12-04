@@ -55,7 +55,7 @@ Copy code
 ## 🧩 ER Diagram
 
 The Entity–Relationship (ER) diagram below shows how the tables are connected in the **Medical Data History** database.
-https://github.com/debabrata099/Medical-Data-History-MySQL/blob/main/Raw%20Data/ER%20Diagram.png
+Raw Data/ER Diagram.png
 
 
 Note: In the admissions table, the column attending_doctor_id is treated as doctor_id to join with the doctors table.
