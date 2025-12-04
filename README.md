@@ -8,42 +8,55 @@ This project was completed during my **internship at Datamites** as part of prac
 
 ## 📁 Project Structure
 
-```text
 Medical-Data-History/
-├── admissions.csv
-├── doctors.csv
-├── patients.csv
-├── province_names.csv
-├── Medical_Data_History.sql
-├── Medical Data History.docx
-└── README.md
-📝 Project Objectives
-Study medical-record datasets and build SQL-based insights.
+│── admissions.csv
+│── doctors.csv
+│── patients.csv
+│── province_names.csv
+│── Medical_Data_History.sql
+│── Medical Data History.docx
+│── README.md
 
-Perform querying operations on patient & doctor data.
-
-Solve 34 business problem queries.
-
-Apply Joins, Aggregations, Conditions, Grouping, Filtering, CASE logic, ORDER BY, HAVING, etc.
-
-🛠 Tech Stack
-Component	Used
-Database	MySQL
-Language	SQL
-Files Included	CSV datasets + SQL query file
-
-📊 Dataset Overview
-Table	Description
-patients	Patient personal details (name, age, height, weight, allergies)
-doctors	Medical practitioners and their specialties
-admissions	Diagnosis & admission history
-province_names	Province/region lookup table
-
-🧩 ER Diagram
-The Entity–Relationship (ER) diagram below shows how the tables are connected in the Medical Data History database.
-
-mermaid
+pgsql
 Copy code
+
+---
+
+## 📝 Project Objectives
+
+- Study medical-record datasets and build SQL based insights.
+- Perform querying operations on patient & doctor data.
+- Solve 34 business problem queries.
+- Apply **Joins, Aggregations, Conditions, Grouping, Filtering, CASE logic, ORDER BY, HAVING**, etc.
+
+---
+
+## 🛠 Tech Stack
+
+| Component | Used |
+|---------|-------|
+| Database | MySQL |
+| Language | SQL |
+| Files Included | CSV datasets + SQL query file |
+
+---
+
+## 📊 Dataset Overview
+
+| Table | Description |
+|---|---|
+| `patients` | Patient personal details (name, age, height, weight, allergies, etc.) |
+| `doctors` | Medical practitioners and their specialties |
+| `admissions` | Diagnosis & admission history |
+| `province_names` | Province/region lookup table |
+
+---
+
+## 🧩 ER Diagram
+
+The Entity–Relationship (ER) diagram below shows how the tables are connected in the **Medical Data History** database.
+
+```mermaid
 erDiagram
     PATIENTS ||--o{ ADMISSIONS : "has"
     DOCTORS  ||--o{ ADMISSIONS : "attends"
@@ -102,9 +115,10 @@ Conditional logic using CASE
 BMI & obesity classification
 
 📌 Project Tasks Overview
-All 34 SQL tasks are solved inside: Medical_Data_History.sql
+All 34 SQL tasks solved inside: Medical_Data_History.sql
 
-Example Types of Queries Solved
+Example Types of Queries Solved:
+
 Filter male patients
 
 Handle NULL allergies
@@ -125,33 +139,28 @@ Detect repeat diagnosis admissions
 sql
 Copy code
 -- Highest height patient
-SELECT first_name, last_name, height 
-FROM patients 
-ORDER BY height DESC 
-LIMIT 1;
+select first_name, last_name, height 
+from patients 
+order by height desc 
+limit 1;
 sql
 Copy code
 -- Patients diagnosed with Dementia
-SELECT DISTINCT p.patient_id, p.first_name, p.last_name, a.diagnosis
-FROM patients AS p 
-JOIN admissions AS a 
-  ON p.patient_id = a.patient_id 
-WHERE a.diagnosis = 'Dementia';
+select distinct p.patient_id , p.first_name , p.last_name, a.diagnosis
+from patients as p 
+join admissions as a 
+on p.patient_id = a.patient_id 
+where a.diagnosis = 'Dementia';
 sql
 Copy code
 -- BMI-based obesity classification
-SELECT patient_id,
-       weight,
-       height,
-       CASE 
-         WHEN (weight / POWER(height / 100, 2)) >= 30 THEN 1 
-         ELSE 0 
-       END AS isObese 
-FROM patients;
+select patient_id, weight, height,
+case when (weight / power(height / 100, 2)) >= 30 then 1 else 0 end as isObese 
+from patients;
 🚀 How to Run
 bash
 Copy code
-# 1. Open MySQL
+# 1. Create database & open MySQL
 mysql -u root -p
 
 # 2. (Optional) Create database
@@ -159,10 +168,10 @@ CREATE DATABASE project_medical_data_history;
 USE project_medical_data_history;
 
 # 3. Import SQL file
-SOURCE Medical_Data_History.sql;
+source Medical_Data_History.sql;
 
-# 4. Load CSV files into corresponding tables
-# (via MySQL Workbench or using LOAD DATA INFILE)
+# 4. Load CSV Files into corresponding tables
+# (via MySQL Workbench or LOAD DATA INFILE)
 🔮 Future Enhancements
 Create Power BI or Tableau dashboard
 
@@ -175,5 +184,3 @@ Add automated data validation checks
 👨‍💻 Author
 Debabrata Das
 Data Analytics Intern – Datamites
-
-If you find this project useful, feel free to ⭐ star the repo!
