@@ -56,44 +56,6 @@ Copy code
 
 The Entity–Relationship (ER) diagram below shows how the tables are connected in the **Medical Data History** database.
 
-erDiagram
-    PATIENTS ||--o{ ADMISSIONS : "has"
-    DOCTORS  ||--o{ ADMISSIONS : "attends"
-    PROVINCE_NAMES ||--o{ PATIENTS : "located in"
-
-    PATIENTS {
-        int patient_id PK
-        varchar first_name
-        varchar last_name
-        date birth_date
-        char gender
-        int height
-        int weight
-        varchar allergies
-        varchar city
-        char province_id FK
-    }
-
-    ADMISSIONS {
-        int admission_id PK
-        int patient_id FK
-        int doctor_id FK
-        date admission_date
-        date discharge_date
-        varchar diagnosis
-    }
-
-    DOCTORS {
-        int doctor_id PK
-        varchar first_name
-        varchar last_name
-        varchar specialty
-    }
-
-    PROVINCE_NAMES {
-        char province_id PK
-        varchar province_name
-    }
 
 Note: In the admissions table, the column attending_doctor_id is treated as doctor_id to join with the doctors table.
 
