@@ -56,7 +56,6 @@ Copy code
 
 The Entity–Relationship (ER) diagram below shows how the tables are connected in the **Medical Data History** database.
 
-```mermaid
 erDiagram
     PATIENTS ||--o{ ADMISSIONS : "has"
     DOCTORS  ||--o{ ADMISSIONS : "attends"
@@ -95,6 +94,7 @@ erDiagram
         char province_id PK
         varchar province_name
     }
+
 Note: In the admissions table, the column attending_doctor_id is treated as doctor_id to join with the doctors table.
 
 🔍 Key SQL Learning Areas
