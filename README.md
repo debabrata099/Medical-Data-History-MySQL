@@ -8,17 +8,15 @@ This project was completed during my **internship at Datamites** as part of prac
 
 ## 📁 Project Structure
 
-Medical-Data-History/
-│── admissions.csv
-│── doctors.csv
-│── patients.csv
-│── province_names.csv
-│── Medical_Data_History.sql
-│── Medical Data History.docx
-│── README.md
+### Medical-Data-History
+- `admissions.csv`
+- `doctors.csv`
+- `patients.csv`
+- `province_names.csv`
+- `Medical_Data_History.sql`
+- `Medical Data History.docx`
+- `README.md`
 
-pgsql
-Copy code
 
 ---
 
