@@ -89,21 +89,21 @@ All 34 SQL tasks solved inside: Medical_Data_History.sql
 
 Example Types of Queries Solved:
 
-Filter male patients
+- Filter male patients
 
-Handle NULL allergies
+- Handle NULL allergies
 
-Join patients with provinces
+- Join patients with provinces
 
-Count admissions and group by diagnosis
+- Count admissions and group by diagnosis
 
-Group cities by patient count
+- Group cities by patient count
 
-Identify obese patients using BMI
+- Identify obese patients using BMI
 
-Find unique first names
+- Find unique first names
 
-Detect repeat diagnosis admissions
+- Detect repeat diagnosis admissions
 
 ---
 
