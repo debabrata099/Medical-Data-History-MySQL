@@ -61,6 +61,8 @@ The Entity–Relationship (ER) diagram below shows how the tables are connected 
 
 Note: In the admissions table, the column attending_doctor_id is treated as doctor_id to join with the doctors table.
 
+---
+
 ## 🔍 Key SQL Learning Areas
 
 Filtering (WHERE, BETWEEN, IN, LIKE)
@@ -78,6 +80,8 @@ Data cleaning (NULL handling + updates)
 Conditional logic using CASE
 
 BMI & obesity classification
+
+---
 
 ## 📌 Project Tasks Overview
 
@@ -101,6 +105,8 @@ Find unique first names
 
 Detect repeat diagnosis admissions
 
+---
+
 ## 🏆 Sample Query Snippets
 
 -- Highest height patient
@@ -121,6 +127,7 @@ select patient_id, weight, height,
 case when (weight / power(height / 100, 2)) >= 30 then 1 else 0 end as isObese 
 from patients;
 
+---
 
 ## 🚀 How to Run
 ### 1. Create database & open MySQL
@@ -137,6 +144,8 @@ source Medical_Data_History.sql;
 ### 4. Load CSV Files into corresponding tables
 (via MySQL Workbench or LOAD DATA INFILE)
 
+---
+
 ## 🔮 Future Enhancements
 Create Power BI or Tableau dashboard
 
@@ -145,6 +154,8 @@ Build stored procedures / triggers
 Convert to mini-web app with Flask / Streamlit / Node
 
 Add automated data validation checks
+
+---
 
 ## 👨‍💻 Author
 Debabrata Das
