@@ -65,21 +65,21 @@ Note: In the admissions table, the column attending_doctor_id is treated as doct
 
 ## 🔍 Key SQL Learning Areas
 
-Filtering (WHERE, BETWEEN, IN, LIKE)
+- Filtering (WHERE, BETWEEN, IN, LIKE)
 
-Aggregations (COUNT, SUM, MAX, MIN)
+- Aggregations (COUNT, SUM, MAX, MIN)
 
-GROUP BY & HAVING conditions
+- GROUP BY & HAVING conditions
 
-String functions (CONCAT, UPPER, LOWER, etc.)
+- String functions (CONCAT, UPPER, LOWER, etc.)
 
-Joins for relational mapping
+- Joins for relational mapping
 
-Data cleaning (NULL handling + updates)
+- Data cleaning (NULL handling + updates)
 
-Conditional logic using CASE
+- Conditional logic using CASE
 
-BMI & obesity classification
+- BMI & obesity classification
 
 ---
 
