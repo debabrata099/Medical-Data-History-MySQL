@@ -123,18 +123,18 @@ from patients;
 
 
 ## 🚀 How to Run
-# 1. Create database & open MySQL
+### 1. Create database & open MySQL
 mysql -u root -p
 
-# 2. (Optional) Create database
+### 2. (Optional) Create database
 CREATE DATABASE project_medical_data_history;
 
 USE project_medical_data_history;
 
-# 3. Import SQL file
+### 3. Import SQL file
 source Medical_Data_History.sql;
 
-# 4. Load CSV Files into corresponding tables
+### 4. Load CSV Files into corresponding tables
 (via MySQL Workbench or LOAD DATA INFILE)
 
 ## 🔮 Future Enhancements
