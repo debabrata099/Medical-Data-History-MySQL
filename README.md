@@ -133,8 +133,8 @@ USE project_medical_data_history;
 source Medical_Data_History.sql;
 
 # 4. Load CSV Files into corresponding tables
-# (via MySQL Workbench or LOAD DATA INFILE)
-🔮 Future Enhancements
+(via MySQL Workbench or LOAD DATA INFILE)
+# 🔮 Future Enhancements
 Create Power BI or Tableau dashboard
 
 Build stored procedures / triggers
