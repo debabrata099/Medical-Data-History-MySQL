@@ -109,14 +109,14 @@ Detect repeat diagnosis admissions
 
 ## 🏆 Sample Query Snippets
 
-- **Highest height patient
+### - Highest height patient
 
 select first_name, last_name, height 
 from patients 
 order by height desc 
 limit 1;
 
-- **Patients diagnosed with Dementia
+### - Patients diagnosed with Dementia
 
 select distinct p.patient_id , p.first_name , p.last_name, a.diagnosis
 from patients as p 
@@ -124,7 +124,7 @@ join admissions as a
 on p.patient_id = a.patient_id 
 where a.diagnosis = 'Dementia';
 
-- **BMI-based obesity classification
+### - BMI-based obesity classification
 
 select patient_id, weight, height,
 case when (weight / power(height / 100, 2)) >= 30 then 1 else 0 end as isObese 
